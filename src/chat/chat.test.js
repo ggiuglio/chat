@@ -1,13 +1,13 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
-import configureStore from 'redux-mock-store'
- 
-import App from './App';
+import configureStore from 'redux-mock-store';
+
+import Chat from './chat';
  
 const mockStore = configureStore([]);
  
-describe('Main App Component', () => {
+describe('Chat container', () => {
   let store;
   let component;
  
@@ -18,12 +18,14 @@ describe('Main App Component', () => {
  
     component = renderer.create(
       <Provider store={store}>
-        <App />
+        <Chat />
       </Provider>
     );
+
   });
  
-  it('should render the app', () => {
-    expect(component.toJSON()).toBeTruthy();
+  it('should render hello world message', () => {
+    expect(component.toJSON().children[0]).toEqual('This is where the chat will sit');
   });
+ 
 });
