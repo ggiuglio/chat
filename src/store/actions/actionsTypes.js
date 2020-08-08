@@ -1,1 +1,3 @@
 export const TEST_ACTION = "TEST_ACTION";
+export const LOAD_MESSAGES = "LOAD_MESSAGES";
+export const WRITE_MESSAGE = "WRITE_MESSAGE";
