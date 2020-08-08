@@ -3,6 +3,7 @@ import {
 } from '../actions/actionsTypes'
 
 export const INITIAL_STATE = {
+    test: false
 };
 
 const Reducer = (state = INITIAL_STATE, action) => {
