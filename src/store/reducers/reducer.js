@@ -9,6 +9,10 @@ export const INITIAL_STATE = {
     test: false
 };
 
+const dateFormatOptions = { year: 'numeric', month: 'short', day: 'numeric', time: 'full' };
+const timeFormatOptions = { hour: '2-digit', minute:'2-digit', hour12: false };
+
+
 const Reducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case TEST_ACTION:
@@ -19,7 +23,8 @@ const Reducer = (state = INITIAL_STATE, action) => {
         case LOAD_MESSAGES:
             action.messages.map((message, i) => {
                 message.id = i;
-                message.timeStamp = new Date(message.timeStamp).toLocaleDateString();
+                message.date = new Date(message.timeStamp).toLocaleDateString('en-DE', dateFormatOptions) 
+                    + ' ' + new Date(message.timeStamp).toLocaleTimeString('en-DE', timeFormatOptions);
                 message.isMine = message.author === state.myName;
                 return message;
             });

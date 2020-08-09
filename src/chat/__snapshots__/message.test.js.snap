@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Message should render a message 1`] = `
+<div
+  className="sc-bdVaJa bVzWCR"
+>
+  <div
+    className="sc-bwzfXH bGLOCH"
+  >
+    Giulio
+  </div>
+  <div
+    className="sc-htpNat SYTas"
+  >
+    This is my message
+  </div>
+  <div
+    className="sc-bxivhb dMhSOm"
+  >
+    19 may 2020 18:34
+  </div>
+</div>
+`;

@@ -32,22 +32,22 @@ describe('todos reducer', () => {
         {
           author: 'Tom',
           message: 'Hi this is my first message',
-          timeStamp: 1596888732
+          timeStamp: 1521096122339
         },
         {
           author: 'Lisa',
           message: 'How is the project going?',
-          timeStamp: 1596888732
+          timeStamp: 1521096352339
         },
         {
           author: 'Tom',
           message: 'It proceeds fine?',
-          timeStamp: 1596888732
+          timeStamp: 1521096552339
         },
         {
           author: 'Giulio',
           message: 'Hi, can I have access to the shared folder?',
-          timeStamp: 1596888732
+          timeStamp: 1521096952339
         }
       ];
       const stateMessages = [
@@ -56,28 +56,32 @@ describe('todos reducer', () => {
           "id": 0,
           "isMine": false,
           "message": "Hi this is my first message",
-          "timeStamp": "1/19/1970",
+          "timeStamp": 1521096122339,
+          "date": "Mar 15, 2018 07:42",
         },
         {
           "author": "Lisa",
           "id": 1,
           "isMine": false,
           "message": "How is the project going?",
-          "timeStamp": "1/19/1970",
+          "timeStamp": 1521096352339,
+          "date": "Mar 15, 2018 07:45",
         },
         {
           "author": "Tom",
           "id": 2,
           "isMine": false,
           "message": "It proceeds fine?",
-          "timeStamp": "1/19/1970",
+          "timeStamp": 1521096552339,
+          "date": "Mar 15, 2018 07:49",
         },
         {
           "author": "Giulio",
           "id": 3,
           "isMine": true,
           "message": "Hi, can I have access to the shared folder?",
-          "timeStamp": "1/19/1970",
+          "timeStamp": 1521096952339,
+          "date": "Mar 15, 2018 07:55",
         },
       ];
       expect(
