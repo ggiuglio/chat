@@ -1,15 +1,12 @@
-import reducer, { INITIAL_STATE } from './reducer'
+import reducer, { INITIAL_STATE } from './reducer';
 import {
   TEST_ACTION,
-} from '../actions/actionsTypes'
+} from '../actions/actionsTypes';
+import INITIAL_STATE from './reducer';
 
 describe('todos reducer', () => {
   it('should return the initial state', () => {
-    expect(reducer(undefined, {})).toEqual(
-      {
-        test: false
-      }
-    )
+    expect(reducer(undefined, {})).toEqual(INITIAL_STATE)
   })
 
   describe('when TEST_ACTION is dispatched', () => {

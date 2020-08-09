@@ -51,3 +51,35 @@ export const postMessage = (author, text) => {
       });
   }
 }
+
+//mock
+export const loadMessagesMock = () => {
+  const messages = [
+    {
+      author: 'Tom',
+      message: 'Hi this is my first message',
+      timeStamp: 1596888732
+    },
+    {
+      author: 'Lisa',
+      message: 'How is the project going?',
+      timeStamp: 1596888732
+    },
+    {
+      author: 'Tom',
+      message: 'It proceeds fine?',
+      timeStamp: 1596888732
+    },
+    {
+      author: 'Giulio',
+      message: 'Hi, can I have access to the shared folder?',
+      timeStamp: 1596888732
+    }
+  ]
+  return dispatch => {
+    dispatch({
+      type: LOAD_MESSAGES,
+      messages: messages
+    });
+  }
+}
