@@ -7,7 +7,6 @@ import { getMessages } from '../store/selectors/selector';
 
 import { loadMessagesMock } from '../store/actions/actionsCreator';
 
-
 const ChatContainer = styled.div`
   width: 100vw;
   height: 100vh;

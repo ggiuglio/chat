@@ -75,11 +75,13 @@ export const loadMessagesMock = () => {
       message: 'Hi, can I have access to the shared folder?',
       timeStamp: 1596888732
     }
-  ]
+  ];
   return dispatch => {
-    dispatch({
-      type: LOAD_MESSAGES,
-      messages: messages
+    return Promise.resolve(true).then(() => {
+      dispatch({
+        type: LOAD_MESSAGES,
+        messages: messages
+      });
     });
   }
 }
