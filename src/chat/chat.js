@@ -7,8 +7,6 @@ import Message from './message';
 import body_BG from '../assets/images/body_BG.png';
 import NewMessage from '../newMessage/newMessage';
 
-import { loadMessagesMock } from '../store/actions/actionsCreator';
-
 const ChatContainer = styled.div`
   width: 100vw;
   height: 100vh;
@@ -30,7 +28,7 @@ const Chat = ({ fetchMessages, messages }) => {
     <Messages>
       {
         messages.map(message =>
-          <Message key={message.id} message={message} />
+          <Message key={message._id} message={message} />
         )
       }
     </Messages>

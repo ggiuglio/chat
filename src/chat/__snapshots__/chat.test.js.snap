@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chat container should render message list 1`] = `
+<div
+  className="sc-gzVnrw ejgSRj"
+>
+  <div
+    className="sc-htoDjs gcGsnJ"
+  >
+    <div
+      className="sc-bdVaJa bVzWCR"
+    >
+      <div
+        className="sc-bwzfXH bGLOCH"
+      >
+        Tom
+      </div>
+      <div
+        className="sc-htpNat SYTas"
+      >
+        Hi this is my first message
+      </div>
+      <div
+        className="sc-bxivhb dMhSOm"
+      >
+        1/19/1970
+      </div>
+    </div>
+    <div
+      className="sc-bdVaJa bVzWCR"
+    >
+      <div
+        className="sc-bwzfXH bGLOCH"
+      >
+        Lisa
+      </div>
+      <div
+        className="sc-htpNat SYTas"
+      >
+        How is the project going?
+      </div>
+      <div
+        className="sc-bxivhb dMhSOm"
+      >
+        1/19/1970
+      </div>
+    </div>
+    <div
+      className="sc-bdVaJa bVzWCR"
+    >
+      <div
+        className="sc-bwzfXH bGLOCH"
+      >
+        Tom
+      </div>
+      <div
+        className="sc-htpNat SYTas"
+      >
+        It proceeds fine?
+      </div>
+      <div
+        className="sc-bxivhb dMhSOm"
+      >
+        1/19/1970
+      </div>
+    </div>
+    <div
+      className="sc-bdVaJa iOpiwT"
+    >
+      
+      <div
+        className="sc-htpNat SYTas"
+      >
+        Hi, can I have access to the shared folder?
+      </div>
+      <div
+        className="sc-bxivhb dMhSOm"
+      >
+        1/19/1970
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-ifAKCX fRTgzm"
+  >
+    <textarea
+      className="sc-EHOje hCBww"
+      onChange={[Function]}
+      value=""
+    />
+    <button
+      className="sc-bZQynM kdMRmz"
+      onClick={[Function]}
+    >
+      Send
+    </button>
+  </div>
+</div>
+`;

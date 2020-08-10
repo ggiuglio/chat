@@ -2,7 +2,6 @@ import configureMockStore from 'redux-mock-store';
 import axios from 'axios';
 import thunk from 'redux-thunk';
 import {
-  TEST_ACTION,
   LOAD_MESSAGES
 } from './actionsTypes.js';
 import {
@@ -18,16 +17,6 @@ jest.mock('axios');
 
 
 describe('async actions', () => {
-
-  describe('testAction', () => {
-    it('dispatches a TEST_ACTION action', () => {
-      const store = mockStore({ test: 'test' })
-
-      store.dispatch(testAction());
-
-      expect(store.getActions()).toContainEqual({ type: TEST_ACTION, value: 'test' });
-    });
-  });
 
   describe('loadMessage', () => {
     it('should dipatch LOAD_MESSAGE action with the list of messages fetched from the server', () => {
@@ -57,7 +46,7 @@ describe('async actions', () => {
     it('should make a POST http request passing the message to post', () => {
 
       axios.post = jest.fn().mockResolvedValue({ data: 'success' });
-      const store = mockStore({ myName: 'Giulio' })
+      const store = mockStore({ myName: 'Giulio', myToken: "80Gbn0C8vA0" })
 
       return store.dispatch(postMessage('test message'));
       expect(axios.post).toHaveBeenCalledWith(
@@ -67,11 +56,18 @@ describe('async actions', () => {
       );
     });
     it('should dispatch WRITE_MESSAGE action when successfull', () => {
-      axios.post = jest.fn().mockResolvedValue({ data: 'success' });
-      const store = mockStore({ myName: 'Giulio' })
+      const message = {
+        _id: 0,
+        author: 'Giulio',
+        message: 'test message',
+        timeStamp: 1521096352339
+      };
+
+      axios.post = jest.fn().mockResolvedValue({ data: message });
+      const store = mockStore({ myName: 'Giulio', myToken: "80Gbn0C8vA0" })
 
       return store.dispatch(postMessage('test message')).then(() => {
-        expect(store.getActions()).toContainEqual({ "message": { "author": "Giulio", "message": "test message" }, "type": "WRITE_MESSAGE" });
+        expect(store.getActions()).toContainEqual({ "message": message, "type": "WRITE_MESSAGE" });
       });
     })
   });

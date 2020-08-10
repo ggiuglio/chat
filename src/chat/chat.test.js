@@ -18,31 +18,31 @@ describe('Chat container', () => {
   const stateMessages = [
     {
       "author": "Tom",
-      "id": 0,
+      "_id": 0,
       "isMine": false,
       "message": "Hi this is my first message",
-      "timeStamp": "1/19/1970",
+      "date": "1/19/1970",
     },
     {
       "author": "Lisa",
-      "id": 1,
+      "_id": 1,
       "isMine": false,
       "message": "How is the project going?",
-      "timeStamp": "1/19/1970",
+      "date": "1/19/1970",
     },
     {
       "author": "Tom",
-      "id": 2,
+      "_id": 2,
       "isMine": false,
       "message": "It proceeds fine?",
-      "timeStamp": "1/19/1970",
+      "date": "1/19/1970",
     },
     {
       "author": "Giulio",
-      "id": 3,
+      "_id": 3,
       "isMine": true,
       "message": "Hi, can I have access to the shared folder?",
-      "timeStamp": "1/19/1970",
+      "date": "1/19/1970",
     },
   ];
 
@@ -64,8 +64,8 @@ describe('Chat container', () => {
     expect(store.dispatch).toHaveBeenCalledTimes(1)
   });
 
-  it('should render 4 messages', () => {
-    expect(component.toJSON().children.length).toEqual(4);
+  it('should render message list', () => {
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
 });
