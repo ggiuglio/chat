@@ -4,7 +4,7 @@ import {
 } from '../actions/actionsTypes'
 
 export const INITIAL_STATE = {
-    myName: 'Giulio',
+    myName: 'Lisa',
     myToken: 'qSdDhODv3pca',
     messages: [],
     test: false

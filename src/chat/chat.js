@@ -15,8 +15,15 @@ const ChatContainer = styled.div`
 `;
 const Messages = styled.div`
   width: 100vw;
+  max-height: calc(100vh - 80px);
+  overflow: auto;
   padding: 16px 24px;
   box-sizing: border-box;
+  @media (min-width: 700px) {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right:auto;
+  }
 `;
 
 const Chat = ({ fetchMessages, messages }) => {

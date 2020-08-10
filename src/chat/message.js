@@ -12,6 +12,9 @@ const MessageBox = styled.div`
   border-radius: 6px;
   font-size: 16px;
   margin-left: ${({ isMine }) => isMine ? 'auto' : '0'};
+  @media (min-width: 700px) {
+    max-width: 420px;
+  }
 `;
 const Author = styled.div`
   margin-bottom: 4px;

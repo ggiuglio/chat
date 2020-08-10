@@ -11,12 +11,18 @@ const NewMessageBar = styled.div`
   background-color: #d5dade;
   padding: 10px 20px;
   box-sizing: border-box;
+  @media (min-width: 700px) {
+    background-color: #3798d4; 
+  }
 `;
 const NewMessageInput = styled.textarea`
   height: 55px;
   width: Calc(100vw - 120px);
   border-radius: 6px;
   resize: none;
+  @media (min-width: 700px) {
+    width: Calc(100vw - 180px);
+  }
 `;
 const NewMessageButton = styled.button`
   width: 50px;
@@ -30,6 +36,15 @@ const NewMessageButton = styled.button`
   cursor: pointer;
   font-size: 16px;
   padding: 5px;
+  @media (min-width: 700px) {
+    background-color: #ff876d;
+    color: white;
+    width: 100px;
+    padding: 20px;
+    border-radius: 6px;
+    vertical-align: 25px;
+    margin-left: 28px;
+  }
 `
 
 const NewMessage = ({ writeMessage }) => {
