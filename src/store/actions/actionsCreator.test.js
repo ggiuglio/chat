@@ -57,9 +57,9 @@ describe('async actions', () => {
     it('should make a POST http request passing the message to post', () => {
 
       axios.post = jest.fn().mockResolvedValue({ data: 'success' });
-      const store = mockStore({ test: 'test' })
+      const store = mockStore({ myName: 'Giulio' })
 
-      return store.dispatch(postMessage('Giulio', 'test message'));
+      return store.dispatch(postMessage('test message'));
       expect(axios.post).toHaveBeenCalledWith(
         "https://chatty.kubernetes.doodle-test.com/api/chatty/v1.0",
         { "author": "Giulio", "message": "test message" },
@@ -68,9 +68,9 @@ describe('async actions', () => {
     });
     it('should dispatch WRITE_MESSAGE action when successfull', () => {
       axios.post = jest.fn().mockResolvedValue({ data: 'success' });
-      const store = mockStore({ test: 'test' })
+      const store = mockStore({ myName: 'Giulio' })
 
-      return store.dispatch(postMessage('Giulio', 'test message')).then(() => {
+      return store.dispatch(postMessage('test message')).then(() => {
         expect(store.getActions()).toContainEqual({ "message": { "author": "Giulio", "message": "test message" }, "type": "WRITE_MESSAGE" });
       });
     })

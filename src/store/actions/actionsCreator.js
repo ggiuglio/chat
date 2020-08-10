@@ -16,7 +16,7 @@ export const testAction = () => {
 
 export const loadMessages = () => {
   return dispatch => {
-    return axios.get('https://chatty.kubernetes.doodle-test.com/api/chatty/v1.0/?token=80Gbn0C8vA0')
+    return axios.get('https://chatty.kubernetes.doodle-test.com/api/chatty/v1.0/?token=qSdDhODv3pca')
       .then((res) => {
         dispatch({
           type: LOAD_MESSAGES,
@@ -29,15 +29,16 @@ export const loadMessages = () => {
   }
 }
 
-export const postMessage = (author, text) => {
-  return dispatch => {
+export const postMessage = (text) => {
+  return (dispatch, getSate) => {
+    const author = getSate().myName;
     return axios.post(
       'https://chatty.kubernetes.doodle-test.com/api/chatty/v1.0',
       { "message": text, "author": author },
       {
         headers: {
           'content-type': 'application/json',
-          'token': '80Gbn0C8vA0'
+          'token': 'qSdDhODv3pca'
         }
       }
     ).then((res) => {
