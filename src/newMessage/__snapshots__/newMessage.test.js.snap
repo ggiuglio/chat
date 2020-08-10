@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`New Message should render a message 1`] = `
+<div
+  className="sc-bdVaJa ejpxlp"
+>
+  <textarea
+    className="sc-bwzfXH bShnlp"
+    onChange={[Function]}
+    value=""
+  />
+  <button
+    className="sc-htpNat iltKDN"
+    onClick={[Function]}
+  >
+    Send
+  </button>
+</div>
+`;
